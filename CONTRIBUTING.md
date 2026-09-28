@@ -87,8 +87,6 @@ This documentation is version-aware. When updating:
 
 ## Questions?
 
-- Open an issue for questions about contributing
-- Check the [GitHub Discussions](https://github.com/orgs/your-org/discussions) for general questions
-- Review the [Issues](https://github.com/orgs/your-org/incus-wsl-learning/issues) before submitting
+- Review the [Issues](https://github.com/hardyweb/Incus-WSL-Learning-Laboratory/issues) before submitting
 
 Thank you for helping improve this learning laboratory!
