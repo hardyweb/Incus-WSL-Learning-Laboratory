@@ -113,7 +113,22 @@ If you want Debian (recommended for this guide):
 ```powershell
 wsl --install -d Debian
 ```
+```
+Downloading: Debian
+Installing: Debian
+Distribution successfully installed. It can be launched via 'wsl.exe -d Debian'
+Launching Debian...
+Provisioning the new WSL instance Debian
+This might take a while...
+Create a default Unix user account: <username>
+```
 
+It is used to create a regular (non-root) user, which will be the default user for the WSL distribution
+
+```
+Enter new UNIX username:
+New password:
+```
 ### See all available distributions:
 
 [Windows PowerShell]
@@ -183,12 +198,7 @@ Or simply:
 wsl
 ```
 
-It is used to create a regular (non-root) user, which will be the default user for the WSL distribution
 
-```
-Enter new UNIX username:
-New password:
-```
 
 You are now inside a **Debian Linux terminal** running on WSL2.
 
