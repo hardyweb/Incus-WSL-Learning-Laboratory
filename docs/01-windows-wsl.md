@@ -183,6 +183,13 @@ Or simply:
 wsl
 ```
 
+It is used to create a regular (non-root) user, which will be the default user for the WSL distribution
+
+```
+Enter new UNIX username:
+New password:
+```
+
 You are now inside a **Debian Linux terminal** running on WSL2.
 
 ## What Just Happened?
