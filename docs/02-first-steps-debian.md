@@ -279,6 +279,22 @@ Debian uses **APT** (Advanced Package Tool).
 sudo apt update
 ```
 Downloads the latest package information from repositories.
+---
+On my spare laptop, it looks like this.
+
+```bash
+hardy@DESKTOP-40PBI82:~$ sudo apt update
+[sudo] password for hardy:
+Get:1 https://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 https://security.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:3 https://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:4 https://security.debian.org/debian-security trixie-security/main amd64 Packages [267 kB]
+Get:5 https://deb.debian.org/debian trixie-backports InRelease [54.0 kB]
+Get:6 https://security.debian.org/debian-security trixie-security/main Translation-en [164 kB]
+Get:7 https://deb.debian.org/debian trixie/main amd64 Packages [9,678 kB]
+26% [7 Packages 1,834 kB/9,678 kB 19%]
+
+```
 
 Does **not** install updates — just refreshes the list.
 
