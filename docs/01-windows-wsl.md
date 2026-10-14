@@ -99,9 +99,15 @@ wsl --install
 
 1. Enables the `Virtual Machine Platform` Windows feature
 2. Enables the `WSL` Windows feature
-3. Downloads and installs the WSL2 Linux kernel
-4. Sets WSL2 as the default version
-5. Installs **Ubuntu** as the default distribution
+   
+**Alternative:** Use Powershell (admin mode )
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+4. Downloads and installs the WSL2 Linux kernel
+5. Sets WSL2 as the default version
+6. Installs **Ubuntu** as the default distribution
 
 > After running this, **restart your computer** when prompted.
 
@@ -252,6 +258,26 @@ explorer.exe \\wsl$\Debian\home\youruser\
 ```
 
 ⚠️ **Do not modify Linux files from Windows** using Windows tools. Use the Linux terminal for Linux files.
+
+**Note-Troubleshoot**
+
+Sometime got error like this 
+
+```powershell 
+PS C:\Users\hardy> wsl --install Debian
+Downloading: Debian GNU/Linux
+The connection with the server was reset
+Error code: Wsl/InstallDistro/WININET_E_CONNECTION_RESET
+If this error was unexpected, please consider searching for existing issues or filing a new issue at https://github.com/microsoft/WSL/issues.
+PS C:\Users\hardy> wsl --update --web-download
+```
+
+maybe, we forgot activate VMPlatform and WSL, use administrator mode
+
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
 ## Next Step
 
