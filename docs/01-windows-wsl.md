@@ -22,7 +22,7 @@ Once installed, you can launch your WSL distribution from Windows Terminal by se
 
 ## What is WSL2?
 
-**WSL2** is the second version of WSL. It uses a real Linux kernel inside a lightweight virtual machine.
+**WSL2** is the second version of WSL. It uses a real Linux kernel inside a lightweight virtual machine. ( WSL3 release on September 29, 2026 )
 
 | Feature | WSL1 | WSL2 |
 |---------|------|------|
