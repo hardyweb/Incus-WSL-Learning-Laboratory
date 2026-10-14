@@ -117,7 +117,7 @@ If you want Debian (recommended for this guide):
 
 [Windows PowerShell]
 ```powershell
-wsl --install -d Debian
+wsl --install Debian
 ```
 
 ```
