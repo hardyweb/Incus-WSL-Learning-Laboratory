@@ -119,6 +119,7 @@ If you want Debian (recommended for this guide):
 ```powershell
 wsl --install -d Debian
 ```
+
 ```
 Downloading: Debian
 Installing: Debian
@@ -135,6 +136,42 @@ It is used to create a regular (non-root) user, which will be the default user f
 Enter new UNIX username:
 New password:
 ```
+
+
+---
+
+```
+C:\Users\hardy>wsl --install Debian
+Downloading: Debian GNU/Linux
+[=====================     36.7%                           ]
+```
+
+```
+PS C:\Users\hardy> wsl --install Debian
+Downloading: Debian GNU/Linux
+Installing: Debian GNU/Linux
+Distribution successfully installed. It can be launched via 'wsl.exe -d Debian'
+Launching Debian
+Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username:
+New password:
+Retype new password:
+
+hardy@DESKTOP-40PBI82:/mnt/c/Users/hardy$ cat /etc/os-release
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.5
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+```
+
+
 ### See all available distributions:
 
 [Windows PowerShell]
