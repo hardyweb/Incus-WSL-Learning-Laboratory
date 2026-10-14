@@ -139,7 +139,7 @@ New password:
 
 
 ---
-
+On my spare laptop, it looks like this.
 ```
 C:\Users\hardy>wsl --install Debian
 Downloading: Debian GNU/Linux
