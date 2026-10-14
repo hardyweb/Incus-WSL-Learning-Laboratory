@@ -92,7 +92,7 @@ sudo apt install -y incus
 
 This installs the Incus version packaged for your Debian release. It is stable and well-tested, but may be an older version.
 
-### Option B: Install from Incus Repository (latest, recommended)
+### Option B: Install from Incus Repository (latest, recommended, ) [ version 7.0 lts at this time ]
 
 #### Step 1: Install Dependencies
 [WSL Debian]
@@ -102,11 +102,23 @@ sudo apt install -y curl gnupg lsb-release
 ```
 
 #### Step 2: Add the Incus Repository
+
 [WSL Debian]
 ```bash
 sudo mkdir -p /usr/share/keyrings
-curl -fsSL https://keys.linuxcontainers.org/keys.gpg | sudo tee /usr/share/keyrings/incus-archive-keyring.gpg > /dev/null
-echo "deb [signed-by=/usr/share/keyrings/incus-archive-keyring.gpg] https://download.opensuse.org/repositories/home:/stgraber:/lxd/debian/$(lsb_release -cs) /" | sudo tee /etc/apt/sources.list.d/incus.list
+curl -fsSL https://pkgs.zabbly.com/key.asc -o /etc/apt/keyrings/zabbly.asc
+```
+```bash
+su sh -c 'cat <<EOF > /etc/apt/sources.list.d/zabbly-incus-lts-7.0.sources
+Enabled: yes
+Types: deb
+URIs: https://pkgs.zabbly.com/incus/lts-7.0
+Suites: $(. /etc/os-release && echo ${VERSION_CODENAME})
+Components: main
+Architectures: $(dpkg --print-architecture)
+Signed-By: /etc/apt/keyrings/zabbly.asc
+
+EOF'
 ```
 
 #### Step 3: Install Incus
@@ -132,12 +144,17 @@ incus --version
 
 Expected output shows the version number, for example:
 ```
-incus 6.0
+incus 7.x  ( if you install from 7.0 lts source ) 
 ```
 
 ## Initialise Incus
 
 Before using Incus, you need to initialise it:
+
+```bash
+sudo adduser $USER incus-admin
+newgrp incus-admin
+```
 
 [WSL Debian]
 ```bash
