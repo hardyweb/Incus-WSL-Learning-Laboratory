@@ -285,7 +285,35 @@ If all goes well, you will see:
 ```
 Incus initialised successfully.
 ```
+---
 
+On my spare laptop, it looks like this.
+
+```bash
+
+hardy@DESKTOP-40PBI82:~$ newgrp incus-admin
+hardy@DESKTOP-40PBI82:~$ sudo incus admin init
+Would you like to use clustering? (yes/no) [default=no]: no
+Do you want to configure a new storage pool? (yes/no) [default=yes]: yes
+Name of the new storage pool [default=default]:
+Name of the storage backend to use (dir, truenas) [default=dir]: dir
+Where should this storage pool store its data? [default=/var/lib/incus/storage-pools/default]:
+Would you like to create a new local network bridge? (yes/no) [default=yes]:
+What should the new bridge be called? [default=incusbr0]:
+What IPv4 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]:
+What IPv6 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]:
+Would you like the server to be available over the network? (yes/no) [default=no]:
+Would you like stale cached images to be updated automatically? (yes/no) [default=yes]:
+Would you like a YAML "init" preseed to be printed? (yes/no) [default=no]:
+hardy@DESKTOP-40PBI82:~$ incus list
+To start your first container, try: incus launch images:ubuntu/24.04
+Or for a virtual machine: incus launch images:ubuntu/24.04 --vm
+
++------+-------+------+------+------+-----------+
+| NAME | STATE | IPV4 | IPV6 | TYPE | SNAPSHOTS |
++------+-------+------+------+------+-----------+
+```
+---
 ## Verify Initialisation
 
 [WSL Debian]
