@@ -57,7 +57,7 @@ WSL2/WSL3 is what you want for learning Linux and running Incus.
 | Hardware access | Full | Limited (improving) |
 | Risk to Windows | Partition changes | None |
 
-## WSL2 vs Traditional VM (VirtualBox/VMware)
+## WSL2/WSL3 vs Traditional VM (VirtualBox/VMware)
 
 | | Traditional VM | WSL2/WSL3 |
 |---|----------------|------|
