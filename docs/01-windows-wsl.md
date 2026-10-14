@@ -20,21 +20,26 @@ winget install Microsoft.WindowsTerminal
 
 Once installed, you can launch your WSL distribution from Windows Terminal by selecting it from the dropdown menu, or by running `wsl` in a PowerShell/Command Prompt tab.
 
-## What is WSL2?
+## What is WSL2/WSL3 ?
 
-**WSL2** is the second version of WSL. It uses a real Linux kernel inside a lightweight virtual machine. ( WSL3 release on September 29, 2026 )
+**WSL2** is the second version of WSL and **WSL3** is the third version. It uses a real Linux kernel inside a lightweight virtual machine. ( WSL3 release on September 29, 2026 )
+ 
 
-| Feature | WSL1 | WSL2 |
-|---------|------|------|
-| Linux kernel | No (translation layer) | Yes (real kernel) |
-| System call compatibility | Partial | Full |
-| Performance (file I/O) | Fast on Windows files | Fast on Linux files |
-| Docker/container support | Limited | Full |
-| Nested virtualization | No | Yes |
+| Feature                   | WSL1                          | WSL2                                | WSL3                                                      |
+| ------------------------- | ----------------------------- | ----------------------------------- | --------------------------------------------------------- |
+| Linux kernel              | System call translation layer | Real Linux kernel                   | Reported new architecture; verify official specifications |
+| System call compatibility | Partial                       | High, using a native Linux kernel   | Requires specification verification                       |
+| File I/O performance      | Fast on Windows files         | Fast on Linux files                 | Depends on implementation                                 |
+| Docker/container support  | Limited                       | Supported                           | Reported improved Linux container support                 |
+| Nested virtualization     | Generally unsupported         | Supported, subject to configuration | Requires verification                                     |
+| GPU/NPU access            | Limited                       | GPU acceleration supported          | Reported near-native GPU/NPU access                       |
+| Architecture              | System call translation       | Lightweight virtual machine         | Reported paravirtualization-based approach                |
 
-WSL2 is what you want for learning Linux and running Incus.
+Note: WSL3 features are based on reporting and should be verified against official Microsoft documentation before being presented as generally available.
 
-## Why WSL2 for Learning Linux?
+WSL2/WSL3 is what you want for learning Linux and running Incus.
+
+## Why WSL2/WSL3 for Learning Linux?
 
 - **Real Linux kernel** — `uname -a` shows `Linux`
 - **Full system call compatibility** — containers, Kubernetes, eBPF work
@@ -42,9 +47,9 @@ WSL2 is what you want for learning Linux and running Incus.
 - **Windows integration** — access Windows files from Linux (`/mnt/c/...`)
 - **Fast startup** — seconds, not minutes
 
-## WSL2 vs Dual Boot
+## WSL2/WSL3 vs Dual Boot
 
-| | Dual Boot | WSL2 |
+| | Dual Boot | WSL2/WSL3 |
 |---|-----------|------|
 | Switching OS | Reboot required | Instant |
 | Windows apps | Not available | Available |
@@ -54,7 +59,7 @@ WSL2 is what you want for learning Linux and running Incus.
 
 ## WSL2 vs Traditional VM (VirtualBox/VMware)
 
-| | Traditional VM | WSL2 |
+| | Traditional VM | WSL2/WSL3 |
 |---|----------------|------|
 | Resource overhead | High | Low |
 | Integration with Windows | Poor | Excellent |
