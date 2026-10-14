@@ -8,6 +8,14 @@ The most common command to start a container:
 ```bash
 incus launch images:debian/13 debian01
 ```
+-----
+
+On my spare laptop, it looks like this.
+```
+hardy@DESKTOP-40PBI82:~$ incus launch images:debian/13 debian01
+Launching the instance
+Retrieving image: rootfs: 5% (521.23kB/s)
+```
 
 ### What This Command Does
 
