@@ -106,7 +106,7 @@ sudo apt install -y curl gnupg lsb-release
 [WSL Debian]
 ```bash
 sudo mkdir -p /usr/share/keyrings
-curl -fsSL https://pkgs.zabbly.com/key.asc -o /etc/apt/keyrings/zabbly.asc
+sudo curl -fsSL https://pkgs.zabbly.com/key.asc -o /etc/apt/keyrings/zabbly.asc
 ```
 ```bash
 su sh -c 'cat <<EOF > /etc/apt/sources.list.d/zabbly-incus-lts-7.0.sources
