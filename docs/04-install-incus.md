@@ -174,7 +174,7 @@ newgrp incus-admin
 
 [WSL Debian]
 ```bash
-sudo incus admin init
+incus admin init
 ```
 
 You will be prompted with several questions. **Read each one carefully.**
