@@ -303,6 +303,84 @@ git branch feature-test
 git push origin feature-test
 ```
 
+### Choosing Your Text Editor
+
+If you prefer working in an isolated programming environment, you can also install your favourite text editor directly inside the Incus container.
+
+This allows you to edit source code and configuration files without leaving the container or modifying your main WSL environment.
+
+Choose an editor that suits your workflow:
+
+**Option 1: Neovim**
+
+A modern, extensible terminal-based editor suitable for developers who prefer keyboard-driven workflows.
+
+```bash
+apt update
+apt install neovim -y
+```
+
+Launch:
+
+```bash
+nvim hello.php
+```
+
+**Option 2: Vim**
+
+A lightweight and widely available terminal-based text editor.
+
+```bash
+apt update
+apt install vim -y
+```
+
+Launch:
+
+```bash
+vim hello.php
+```
+
+**Option 3: Nano**
+
+A beginner-friendly terminal text editor with simple keyboard shortcuts.
+
+```bash
+apt update
+apt install nano -y
+```
+
+Launch:
+
+```bash
+nano hello.php
+```
+
+**Option 4: Pico**
+
+A simple text editor traditionally associated with the Pine email client.
+
+```bash
+apt update
+apt install alpine -y
+```
+
+Launch:
+
+```bash
+pico hello.php
+```
+
+> **Note:** You do not need to install every editor. Choose one based on your preference. Installing an editor inside the container keeps your programming tools separate from your main WSL environment.
+
+**Try It Yourself**
+
+1. Install your preferred text editor.
+2. Create a new PHP, Python, or Go source file.
+3. Edit the file directly inside the container.
+4. Save your changes and execute the program.
+5. Exit the container and observe that your main WSL environment remains separate.
+
 ## Why Use Disposable Programming Environments?
 
 | Feature | Incus Container | Virtual Machine | Dual Boot |
